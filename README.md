@@ -1,10 +1,10 @@
 # LinearTable
-Including the realization of data structure and some exercises.
+Including the realization of data structure and some exercises.<br>
 <br>
 实现了顺序表的插入、删除、查找<br>
 <br>
-####例题如下<br>
-<br>
+#### 例题如下
+<br><br>
 1.从顺序表中删除具有最小值得元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空则显示出错信息并退出运行</br>
 <br>
 2.设计一个高效的算法，将顺序表的所有元素逆置，要求算法的空间复杂度为O(1)<br>
