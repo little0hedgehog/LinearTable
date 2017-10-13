@@ -2,14 +2,14 @@
 #include<malloc.h>
 #include<stdlib.h>
 
-typedef int ElemType;//±íÄÚÔªËØÀàĞÍ
+typedef int ElemType;//è¡¨å†…å…ƒç´ ç±»å‹
 
-typedef struct LNode {//¶¨Òåµ¥Á´±í½áµãÀàĞÍ
-	ElemType data;//Êı¾İÓò
-	struct LNode *next;//Ö¸ÕëÓò
+typedef struct LNode {//å®šä¹‰å•é“¾è¡¨ç»“ç‚¹ç±»å‹
+	ElemType data;//æ•°æ®åŸŸ
+	struct LNode *next;//æŒ‡é’ˆåŸŸ
 }LNode,*LinkList;
 
-//Í·²å·¨³õÊ¼»¯Á´±í
+//å¤´æ’æ³•åˆå§‹åŒ–é“¾è¡¨
 LinkList CreatList1(LinkList &L)
 {
 	LNode *l;
@@ -30,7 +30,7 @@ LinkList CreatList1(LinkList &L)
 	return L;
 }
 
-//Î²²å·¨³õÊ¼»¯Á´±í
+//å°¾æ’æ³•åˆå§‹åŒ–é“¾è¡¨
 LinkList CreatList2(LinkList &L)
 {
 	LNode *s,*r;
@@ -52,7 +52,7 @@ LinkList CreatList2(LinkList &L)
 	return L;
 }
 
-//°´ĞòºÅ²éÕÒ½áµãÖµ£¨×¢Òâµ¥Á´±íÖĞµÄÊı¾İ½áµãµÄ¸öÊı²»°üº¬Í·½áµã£©
+//æŒ‰åºå·æŸ¥æ‰¾ç»“ç‚¹å€¼ï¼ˆæ³¨æ„å•é“¾è¡¨ä¸­çš„æ•°æ®ç»“ç‚¹çš„ä¸ªæ•°ä¸åŒ…å«å¤´ç»“ç‚¹ï¼‰
 LNode *GetElem(LinkList &L, int i)
 {
 	int j = 1;
@@ -74,7 +74,7 @@ LNode *GetElem(LinkList &L, int i)
 	return p;
 }
 
-//°´Öµ²éÕÒ±í½áµã
+//æŒ‰å€¼æŸ¥æ‰¾è¡¨ç»“ç‚¹
 LNode *LocateElem(LinkList &L, ElemType e)
 {
 	LNode *p=L->next;
@@ -89,7 +89,7 @@ LNode *LocateElem(LinkList &L, ElemType e)
 	return temp;
 }
 
-//ºó²å½áµã,°ÑÖµÎªeµÄĞÂ½áµã²åÈëµ½µ¥Á´±íµÄµÚi¸öÎ»ÖÃÉÏ
+//åæ’ç»“ç‚¹,æŠŠå€¼ä¸ºeçš„æ–°ç»“ç‚¹æ’å…¥åˆ°å•é“¾è¡¨çš„ç¬¬iä¸ªä½ç½®ä¸Š
 void BInsert(LinkList &L, ElemType e,int i)
 {
 	LNode *p;
@@ -102,17 +102,17 @@ void BInsert(LinkList &L, ElemType e,int i)
 	p->next = s;
 }
 
-//½«µ¥Á´±íµÄµÚi¸ö½áµãÉ¾³ı
+//å°†å•é“¾è¡¨çš„ç¬¬iä¸ªç»“ç‚¹åˆ é™¤
 void DeleList(LinkList &L,int i)
 {
 	LNode *p;
 	p = GetElem(L, i - 1);
 	if (p == NULL)
-		printf("Ã»ÓĞÕâ¸ö½áµã\n");
+		printf("æ²¡æœ‰è¿™ä¸ªç»“ç‚¹\n");
 	else
 		p->next = (p->next)->next;
 }
-//Çó±í³¤²Ù×÷
+//æ±‚è¡¨é•¿æ“ä½œ
 int SizeList(LinkList &L)
 {
 	int i=0;
@@ -127,7 +127,7 @@ int SizeList(LinkList &L)
 
 
 
-//°´´ÓÍ·µ½Î²µÄË³ĞòÊä³öÁ´±í
+//æŒ‰ä»å¤´åˆ°å°¾çš„é¡ºåºè¾“å‡ºé“¾è¡¨
 void PrintfList(LinkList &L)
 {
 	LinkList temp = L->next;
@@ -152,19 +152,19 @@ int main()
 	PrintfList(L);
 	printf("%d", num);
 
-	//----²âÊÔGetElem(LinkList &L, int i)----//
+	//----æµ‹è¯•GetElem(LinkList &L, int i)----//
 	//temp = GetElem(L, 11);
 	//if (temp == NULL)
-	//	printf("\n²»´æÔÚ´Ë½Úµã!\n");
+	//	printf("\nä¸å­˜åœ¨æ­¤èŠ‚ç‚¹!\n");
 	//else
 	//	printf("\n%d", temp->data);
 
-	//----²âÊÔLocateElem(LinkList &L, ElemType e)----//
+	//----æµ‹è¯•LocateElem(LinkList &L, ElemType e)----//
 	/*test = LocateElem(L, 8);
 	if (test == NULL)
-		printf("\n²»´æÔÚ´Ë½Úµã!\n");
+		printf("\nä¸å­˜åœ¨æ­¤èŠ‚ç‚¹!\n");
 	else
-		printf("\nÕÒµ½À²!");*/
+		printf("\næ‰¾åˆ°å•¦!");*/
 
 	system("pause");
 	return 0;
