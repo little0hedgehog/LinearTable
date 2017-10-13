@@ -1,9 +1,12 @@
 # LinearTable
-Including the realization of data structure and some exercises.<br>
+Including the realization of data structure and some exercises.<br><br>
+### 顺序表<br>
+### 线性表的链式表示<br>
 <br>
-实现了顺序表的插入、删除、查找<br>
+#### 顺序表<br>
+实现了顺序表的插入、删除、查找和一些经典例题<br>
 <br>
-#### 例题如下
+##### 例题如下
 <br>
 1.从顺序表中删除具有最小值得元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空则显示出错信息并退出运行</br>
 <br>
