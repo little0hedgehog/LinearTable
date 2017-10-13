@@ -31,6 +31,5 @@ Including the realization of data structure and some exercises.<br><br>
 10.设序列有n个元素，若一个元素在序列中出现的次数>n/2，则称这个元素为此序列的主元素。假设有一个序列A设计一个尽可能高效的算法，找出A的主元素。若存在则输出主元素；否则输出-1<br>
 <br>
 #### 线性表的链式表示--------main2.cpp<br>
-<br>
 实现了单链表的头插法、尾插法初始化链表、插入、删除、查找<br>
 <br>
